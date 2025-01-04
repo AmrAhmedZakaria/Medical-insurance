@@ -12,12 +12,12 @@ The model used for prediction is a Random Forest Regressor trained on a dataset 
 
 
 def user_input_features():
-    age = st.sidebar.slider("Age", 18, 100, 30)
-    sex = st.sidebar.selectbox("Sex", [0, 1])
-    bmi = st.sidebar.slider("BMI", 10.0, 50.0, 25.0)
-    children = st.sidebar.slider("Children", 0, 10, 0)
-    smoker = st.sidebar.selectbox("Smoker", [0, 1])
-    region = st.sidebar.selectbox("Region", [0, 1, 2, 3])
+    age = st.number_input("Age", 18, 100, 30)
+    sex = st.selectbox("Sex", [0, 1])
+    bmi = st.number_input("BMI", 10.0, 50.0, 25.0)
+    children = st.number_input("Children", 0, 10, 0)
+    smoker = st.selectbox("Smoker", [0, 1])
+    region = st.selectbox("Region", [0, 1, 2, 3])
 
     data = {
         "age": age,
